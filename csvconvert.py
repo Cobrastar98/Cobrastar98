@@ -10,6 +10,8 @@ ii = 0
 with open('file.txt', 'r', encoding='utf8', newline='') as f_input, \
      open(str(ii + 1) + 'output.csv', 'w', encoding='utf8', newline='') as f_output:
 
+# If the line begins with a pipe character then process the line     
+     
     input_lines = filter(lambda x: len(x) > 2 and x[0] == '|', f_input)
 
     csv_input = csv.reader(input_lines, delimiter='|')
